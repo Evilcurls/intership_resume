@@ -1,212 +1,92 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>翁思汉 - 个人简历</title>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #007acc;
-            --bg-color: #f5f7fa;
-            --text-color: #333;
-            --light-text: #666;
-            --border-color: #eaeaea;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 50px 60px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        header {
-            text-align: center;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 25px;
-            margin-bottom: 35px;
-        }
-
-        h1 {
-            margin: 0 0 15px 0;
-            color: var(--primary-color);
-            font-size: 2.4em;
-            letter-spacing: 2px;
-        }
-
-        .contact-info {
-            color: var(--light-text);
-            font-size: 0.95em;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .contact-info span {
-            display: inline-flex;
-            align-items: center;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-top: 35px;
-            margin-bottom: 20px;
-            font-size: 1.4em;
-        }
-
-        h3 {
-            color: var(--secondary-color);
-            margin: 0 0 10px 0;
-            font-size: 1.15em;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-
-        .date {
-            font-weight: normal;
-            color: var(--light-text);
-            font-size: 0.9em;
-        }
-
-        .item-section {
-            margin-bottom: 25px;
-        }
-
-        .item-section:last-child {
-            margin-bottom: 0;
-        }
-
-        p {
-            margin: 5px 0;
-            text-align: justify;
-        }
-
-        ul {
-            margin: 8px 0;
-            padding-left: 22px;
-            color: var(--text-color);
-        }
-
-        li {
-            margin-bottom: 8px;
-            text-align: justify;
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-            word-break: break-all;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .bold-label {
-            font-weight: 600;
-            color: var(--secondary-color);
-        }
-
-        @media (max-width: 600px) {
-            .container { 
-                padding: 30px 20px; 
-            }
-            h3 { 
-                flex-direction: column; 
-            }
-            .date { 
-                margin-top: 5px; 
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>翁思汉 | Personal Resume</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-    <div class="container">
-        <header>
-            <h1>翁思汉</h1>
-            <div class="contact-info">
-                <span>手机: 13045943560</span>
-                <span>|</span>
-                <span>邮箱: wengsihan13@outlook.com</span>
-                <span>|</span>
-                <span>籍贯: 福建</span>
-                <span>|</span>
-                <span>出生日期: 2003.10.22</span>
-            </div>
-        </header>
-
-        <section>
-            <h2>教育背景</h2>
-            <div class="item-section">
-                <h3><span>中国传媒大学，信息与通信工程，硕士</span> <span class="date">2024.9 - 2027.6</span></h3>
-            </div>
-            <div class="item-section">
-                <h3><span>青岛大学，通信工程，本科</span> <span class="date">2020.9 - 2024.6</span></h3>
-            </div>
-        </section>
-
-        <section>
-            <h2>项目经验</h2>
-            
-            <div class="item-section">
-                <h3>MedicalGPT</h3>
-                <ul>
-                    <li><span class="bold-label">介绍：</span>MedicalGPT是一个在底座模型的基础上经过全流程增强的医疗领域大模型。</li>
-                    <li><span class="bold-label">增量预训练阶段：</span>选取Qwen2.5-7B为底座模型，使用30万+的医学百科预训练数据进行增量预训练，成功将模型在C-Eval医学相关验证集上的正确率从76.32%提升到79.44%。</li>
-                    <li><span class="bold-label">监督微调阶段：</span>起初直接使用医学指令数据进行监督微调，但甚至有下降的情况，尤其是对于参数小如0.5B的模型。进一步分析发现，模型在C-Eval的physic等指标上表现较差，说明其结构化作答能力不足。为此，对原始语料和C-Eval评测集进行向量化检索，筛选出最相关的10k数据进行训练。该方法有效缓解了对齐税和知识遗忘问题，使模型在C-Eval上的成绩进一步提升至81.45%。</li>
-                    <li><span class="bold-label">偏好数据准备：</span>使用DeepSeek-R1对shibing624/medical开源的3.8k医疗偏好数据进行重构，以应对标签反转缺少推理过程等问题：(1)将原始问题改写为标准化病历格式；(2)重新生成具备完整临床推理过程的优质回答(Chosen)和较弱回答(Rejected)；(3)为防止模型在医疗领域过拟合，还补充了1000条通用偏好推理数据。最终，使用3.8k医疗偏好推理数据与1k通用偏好推理数据混合训练奖励模型。</li>
-                    <li><span class="bold-label">PPO阶段：</span>在PPO阶段，先基于上述混合偏好数据训练奖励模型，再利用奖励信号对策略模型进行优化，并使用共享底座和Qlora等方式减少训练压力，使模型在C-Eval上的成绩进一步提升至83.27%。</li>
-                    <li><span class="bold-label">DPO阶段：</span>在DPO阶段，使用重构后的医疗偏好数据和通用偏好数据直接进行偏好优化，通过拉大优质回答与低质量回答之间的概率差距，进一步增强模型的临床推理能力和回答偏好对齐能力。</li>
-                </ul>
-            </div>
-
-            <div class="item-section">
-                <h3>Computer Agent Control</h3>
-                <ul>
-                    <li><span class="bold-label">介绍：</span>基于Qwen3-VL视觉语言模型的计算机操作自动化工具。能完成自然语言指令到GUI操作的闭环执行。</li>
-                    <li><span class="bold-label">方法：</span>系统通过持续截图获取环境状态，利用视觉语言模型理解屏幕内容并生成结构化工具调用，再由自定义ComputerUse模块执行鼠标点击、拖拽、键盘输入、滚动与等待等操作；同时实现了多轮对话历史管理、相对坐标到实际屏幕坐标映射及分辨率适配，支持端到端桌面任务自动执行。</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>科研经历</h2>
-            
-            <div class="item-section">
-                <h3><span>论文1: Self-Supervised Learning for Multi-Dimensional Voice Timbre Assessment</span> <span class="date">2025.5.16</span></h3>
-                <ul>
-                    <li><span class="bold-label">介绍：</span>构建包含6000条由中国传媒大学播音主持艺术学院专家标注的音频样本音色评估数据集CUC-TE，并提出基于Wav2Vec 2.0的多任务模型Tri-TimbreNet，通过引入时间注意力与特征融合机制，在核心音色维度评估中提升14.7%准确率，并通过消融实验验证模型有效性。</li>
-                    <li><span class="bold-label">文章链接：</span><a href="https://dl.acm.org/doi/full/10.1145/3748825.3748969" target="_blank">https://dl.acm.org/doi/full/10.1145/3748825.3748969</a></li>
-                </ul>
-            </div>
-
-            <div class="item-section">
-                <h3><span>论文2: Multimodal Emotion Recognition Based on Graph Neural Networks</span> <span class="date">2025.8.25</span></h3>
-                <ul>
-                    <li><span class="bold-label">负责部分：</span>情感-情绪增强学习(SE)：引入情绪极性分析作为辅助任务，利用外部知识约束和引导主情感识别任务，有效降低情感判别的模糊性。并在消融实验证实了该模块无论是在IEMOCAP还是CMU-MOSEI数据集中都有效提高了加权F1分数。</li>
-                    <li><span class="bold-label">文章链接：</span><a href="https://www.mdpi.com/2076-3417/15/17/9622" target="_blank">https://www.mdpi.com/2076-3417/15/17/9622</a></li>
-                </ul>
-            </div>
-        </section>
+  <header class="hero">
+    <div class="container hero-content">
+      <img src="assets/you.jpg" alt="翁思汉" class="avatar" />
+      <div>
+        <h1>翁思汉</h1>
+        <p class="subtitle">LLM Engineer · Researcher · Full-Stack Developer</p>
+        <p>📱 13045943560 · 📧 wengsihan13@outlook.com</p>
+        <p>🎓 中国传媒大学 信息与通信工程（硕士，2024–2027）</p>
+        <div class="actions">
+          <a class="btn primary" href="assets/resume.pdf" target="_blank">下载 PDF 简历</a>
+          <a class="btn" href="https://github.com/" target="_blank">GitHub</a>
+        </div>
+      </div>
     </div>
+  </header>
 
+  <main class="container">
+    <section>
+      <h2>教育背景</h2>
+      <div class="card">
+        <h3>中国传媒大学</h3>
+        <p>信息与通信工程 · 硕士 · 2024.09 – 2027.06</p>
+      </div>
+      <div class="card">
+        <h3>青岛大学</h3>
+        <p>通信工程 · 本科 · 2020.09 – 2024.06</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>项目经历</h2>
+
+      <div class="card">
+        <h3>MedicalGPT：医疗大模型对齐与微调系统</h3>
+        <p class="tech">Qwen3-4B · LoRA · PPO · DPO · GRPO · RAG</p>
+        <ul>
+          <li>构建完整的医疗问答大模型微调与评估流水线。</li>
+          <li>通过增量预训练与 Top-10k 检索式 SFT，C-Eval 医学子集提升 7%。</li>
+          <li>实现 PPO / DPO / GRPO 多种 RLHF 对齐方案。</li>
+          <li>最终准确率达到 79.27%，较基线提升 9.2%。</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>智能旅行行程规划系统</h3>
+        <p class="tech">FastAPI · LangGraph · LangChain · Vue3 · TypeScript</p>
+        <ul>
+          <li>设计 POI 搜索、天气、酒店、规划四类 Agent。</li>
+          <li>采用 SSE 实时流式展示 Agent 执行状态。</li>
+          <li>支持多轮对话与高德地图可视化。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>科研成果</h2>
+      <div class="card">
+        <h3>Self-Supervised Learning for Multi-Dimensional Voice Timbre Assessment</h3>
+        <p>ACM · 音频处理 · 自监督学习 · 2025</p>
+      </div>
+      <div class="card">
+        <h3>Multimodal Emotion Recognition Based on Graph Neural Networks</h3>
+        <p>MDPI Applied Sciences · 多模态情绪识别 · 2025</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>技能</h2>
+      <div class="skills">
+        <span>Python</span><span>PyTorch</span><span>Transformers</span>
+        <span>LangChain</span><span>FastAPI</span><span>Vue 3</span>
+        <span>TypeScript</span><span>Docker</span><span>Linux</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 翁思汉 · Built with GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
