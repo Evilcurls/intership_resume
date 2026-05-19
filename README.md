@@ -1,22 +1,22 @@
-# Personal Resume Website
+# PDF Resume GitHub Pages Site
 
-静态个人简历网站，可直接部署到 GitHub Pages。
+本项目不重新排版简历，而是直接在网页中展示原始 PDF，因此可以 100% 保留 LaTeX 输出格式。
 
 ## 部署步骤
 
-1. 创建 GitHub 仓库，例如 `resume-site`
-2. 上传本项目全部文件
-3. 进入 Settings → Pages
+1. 创建 GitHub 仓库（例如 `resume`）
+2. 上传全部文件
+3. 打开 Settings -> Pages
 4. Source 选择 `Deploy from a branch`
 5. Branch 选择 `main`
-6. 保存后等待 1–2 分钟
+6. 等待 1-2 分钟
 
 访问地址：
 
-`https://你的用户名.github.io/resume-site/`
+`https://你的用户名.github.io/resume/`
 
-## 自定义
+## 更新简历
 
-- 替换 `assets/you.jpg`
-- 更新 `assets/resume.pdf`
-- 修改 `index.html` 中的 GitHub 链接
+只需替换：
+
+- `assets/resume.pdf`

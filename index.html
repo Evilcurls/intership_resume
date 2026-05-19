@@ -3,90 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>翁思汉 | Personal Resume</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>翁思汉 - 简历</title>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #525659;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .download {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="container hero-content">
-      <img src="assets/you.jpg" alt="翁思汉" class="avatar" />
-      <div>
-        <h1>翁思汉</h1>
-        <p class="subtitle">LLM Engineer · Researcher · Full-Stack Developer</p>
-        <p>📱 13045943560 · 📧 wengsihan13@outlook.com</p>
-        <p>🎓 中国传媒大学 信息与通信工程（硕士，2024–2027）</p>
-        <div class="actions">
-          <a class="btn primary" href="assets/resume.pdf" target="_blank">下载 PDF 简历</a>
-          <a class="btn" href="https://github.com/" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <section>
-      <h2>教育背景</h2>
-      <div class="card">
-        <h3>中国传媒大学</h3>
-        <p>信息与通信工程 · 硕士 · 2024.09 – 2027.06</p>
-      </div>
-      <div class="card">
-        <h3>青岛大学</h3>
-        <p>通信工程 · 本科 · 2020.09 – 2024.06</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>项目经历</h2>
-
-      <div class="card">
-        <h3>MedicalGPT：医疗大模型对齐与微调系统</h3>
-        <p class="tech">Qwen3-4B · LoRA · PPO · DPO · GRPO · RAG</p>
-        <ul>
-          <li>构建完整的医疗问答大模型微调与评估流水线。</li>
-          <li>通过增量预训练与 Top-10k 检索式 SFT，C-Eval 医学子集提升 7%。</li>
-          <li>实现 PPO / DPO / GRPO 多种 RLHF 对齐方案。</li>
-          <li>最终准确率达到 79.27%，较基线提升 9.2%。</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>智能旅行行程规划系统</h3>
-        <p class="tech">FastAPI · LangGraph · LangChain · Vue3 · TypeScript</p>
-        <ul>
-          <li>设计 POI 搜索、天气、酒店、规划四类 Agent。</li>
-          <li>采用 SSE 实时流式展示 Agent 执行状态。</li>
-          <li>支持多轮对话与高德地图可视化。</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>科研成果</h2>
-      <div class="card">
-        <h3>Self-Supervised Learning for Multi-Dimensional Voice Timbre Assessment</h3>
-        <p>ACM · 音频处理 · 自监督学习 · 2025</p>
-      </div>
-      <div class="card">
-        <h3>Multimodal Emotion Recognition Based on Graph Neural Networks</h3>
-        <p>MDPI Applied Sciences · 多模态情绪识别 · 2025</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>技能</h2>
-      <div class="skills">
-        <span>Python</span><span>PyTorch</span><span>Transformers</span>
-        <span>LangChain</span><span>FastAPI</span><span>Vue 3</span>
-        <span>TypeScript</span><span>Docker</span><span>Linux</span>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 翁思汉 · Built with GitHub Pages</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <a class="download" href="assets/resume.pdf" target="_blank">下载 PDF</a>
+  <iframe src="assets/resume.pdf"></iframe>
 </body>
 </html>
