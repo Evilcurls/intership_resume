@@ -1,39 +1,165 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>翁思汉 - 简历</title>
-  <style>
-    html, body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #525659;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    .download {
-      position: fixed;
-      top: 16px;
-      right: 16px;
-      z-index: 1000;
-      background: rgba(0,0,0,0.7);
-      color: white;
-      text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body>
-  <a class="download" href="assets/resume.pdf" target="_blank">下载 PDF</a>
-  <iframe src="assets/resume.pdf"></iframe>
-</body>
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sihan Weng - research portfolio in speech, multimodal learning, and quality-aware AI."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Sihan Weng | Research Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="name" href="#top">Sihan Weng</a>
+        <nav aria-label="Primary navigation">
+          <a href="#work" data-i18n="navWork">Work</a>
+          <a href="#papers" data-i18n="navPapers">Papers</a>
+          <a href="#education" data-i18n="navEducation">Education</a>
+        </nav>
+        <button class="language-toggle" type="button" aria-label="切换到中文" aria-pressed="false">
+          <span class="toggle-option is-active" data-toggle-lang="en">EN</span>
+          <span aria-hidden="true">/</span>
+          <span class="toggle-option" data-toggle-lang="zh">中</span>
+        </button>
+      </header>
+
+      <main id="top">
+        <section class="intro-section" aria-labelledby="intro-title">
+          <div class="intro-copy">
+            <p class="label" data-i18n="eyebrow">Research portfolio · Beijing</p>
+            <h1 id="intro-title">Sihan Weng<br /><span>翁思汉</span></h1>
+            <p class="lead" data-i18n="intro">
+              I am Sihan Weng, an incoming PhD student at Communication University of China. My work
+              explores speech quality assessment, self-supervised audio representations, and multimodal
+              evaluation.
+            </p>
+            <div class="plain-links">
+              <a href="mailto:wengsihan13@outlook.com">wengsihan13@outlook.com</a>
+              <a href="assets/sihan-weng-resume.pdf" target="_blank" data-i18n="resume">Résumé</a>
+            </div>
+          </div>
+
+          <img
+            class="portrait"
+            src="assets/sihan-weng.jpg"
+            alt="Portrait of Sihan Weng"
+            data-i18n-alt="portraitAlt"
+          />
+        </section>
+
+        <section class="text-section" id="work" aria-labelledby="work-title">
+          <h2 id="work-title" data-i18n="workTitle">Selected work</h2>
+
+          <article class="entry">
+            <div class="entry-date">2026 — Now</div>
+            <div class="entry-body">
+              <h3 data-i18n="speechProjectTitle">Robust evaluation for generated speech</h3>
+              <p data-i18n="speechProjectDesc">
+                Reproduced two recent speech-quality paradigms - TTSD-S2 and SQ-LLM - then stress-tested
+                them beyond their original datasets. The study combines objective distribution metrics
+                with explainable LLM judgments to understand where quality predictors generalize and
+                where they fail.
+              </p>
+              <p class="facts">
+                <span><strong>13</strong> <span data-i18n="metricSystems">TTS systems compared</span></span>
+                <span><strong>10k</strong> <span data-i18n="metricClips">speech clips evaluated</span></span>
+                <span><strong>7</strong> <span data-i18n="metricDimensions">quality dimensions</span></span>
+              </p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-date">2025</div>
+            <div class="entry-body">
+              <h3 data-i18n="medicalTitle">MedicalGPT alignment</h3>
+              <p data-i18n="medicalDesc">
+                Built an end-to-end training pipeline for Qwen2.5-7B, spanning continued pre-training,
+                supervised fine-tuning, PPO, and DPO. Curated domain and preference data to improve
+                medical knowledge retention and cross-domain clinical reasoning.
+              </p>
+              <p class="fact-line"><strong>76.32 → 83.27%</strong> <span data-i18n="medicalResult">accuracy on the medical subset of C-Eval</span></p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-date">2025</div>
+            <div class="entry-body">
+              <h3 data-i18n="aigvTitle">Multi-dimensional quality assessment for AI-generated video</h3>
+              <p data-i18n="aigvDesc">
+                Helped develop AIGVEval, aligning semantic, technical, and motion-quality features with a
+                language model. The system used BLIP, 3D Swin Transformer, SlowFast-R50, and LoRA-tuned
+                Vicuna-7B for holistic video-quality regression.
+              </p>
+              <p class="fact-line"><strong>PLCC 0.654 · SROCC 0.608</strong> <span data-i18n="aigvResult">on the challenge evaluation</span></p>
+            </div>
+          </article>
+        </section>
+
+        <section class="text-section" id="papers" aria-labelledby="papers-title">
+          <h2 id="papers-title" data-i18n="papersTitle">Papers</h2>
+
+          <article class="entry paper">
+            <div class="entry-date">2025.06</div>
+            <div class="entry-body">
+              <h3>Tri-TimbreNet: Self-Supervised Learning for Multi-Dimensional Voice Timbre Assessment</h3>
+              <p data-i18n="paperOneDesc">
+                A multi-task framework that uses self-supervised speech representations, temporal
+                attention, and feature fusion to assess fullness, brightness, and resonance. The work
+                also introduces CUC-TE, a 6,000-sample expert-annotated timbre dataset.
+              </p>
+            </div>
+          </article>
+
+          <article class="entry paper">
+            <div class="entry-date">2025.08</div>
+            <div class="entry-body">
+              <h3>Multimodal Emotion Recognition Based on Graph Neural Networks</h3>
+              <p data-i18n="paperTwoDesc">
+                A multimodal emotion-recognition framework combining hierarchical sequential fusion,
+                sentiment-enhanced learning, and a context-similarity bi-level graph to model both local
+                dialogue structure and long-range context.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <section class="text-section" id="education" aria-labelledby="education-title">
+          <h2 id="education-title" data-i18n="educationTitle">Education</h2>
+
+          <article class="entry education-entry">
+            <div class="entry-date">2026.09 — 2030.06</div>
+            <div class="entry-body">
+              <h3 data-i18n="cuc">Communication University of China</h3>
+              <p data-i18n="phd">PhD · Information and Communication Engineering</p>
+            </div>
+          </article>
+          <article class="entry education-entry">
+            <div class="entry-date">2024.09 — 2026.06</div>
+            <div class="entry-body">
+              <h3 data-i18n="cuc">Communication University of China</h3>
+              <p data-i18n="masters">MEng · Information and Communication Engineering</p>
+            </div>
+          </article>
+          <article class="entry education-entry">
+            <div class="entry-date">2020.09 — 2024.06</div>
+            <div class="entry-body">
+              <h3 data-i18n="qdu">Qingdao University</h3>
+              <p data-i18n="bachelors">BEng · Communication Engineering</p>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        <span>© <span id="year">2026</span> Sihan Weng</span>
+        <a href="mailto:wengsihan13@outlook.com">Email</a>
+      </footer>
+    </div>
+  </body>
 </html>
+

@@ -1,22 +1,17 @@
-# PDF Resume GitHub Pages Site
+# Sihan Weng - Research Portfolio
 
-本项目不重新排版简历，而是直接在网页中展示原始 PDF，因此可以 100% 保留 LaTeX 输出格式。
+A minimal bilingual research portfolio prepared for internship applications.
 
-## 部署步骤
+## Preview locally
 
-1. 创建 GitHub 仓库（例如 `resume`）
-2. 上传全部文件
-3. 打开 Settings -> Pages
-4. Source 选择 `Deploy from a branch`
-5. Branch 选择 `main`
-6. 等待 1-2 分钟
+Open `index.html` directly in a browser, or serve this folder with any static file server.
 
-访问地址：
+## Publish with GitHub Pages
 
-`https://你的用户名.github.io/resume/`
+1. Create a public GitHub repository.
+2. Upload everything in this folder to the repository root.
+3. In **Settings → Pages**, choose **Deploy from a branch**.
+4. Select the `main` branch and `/ (root)`, then save.
 
-## 更新简历
+No build step or dependencies are required.
 
-只需替换：
-
-- `assets/resume.pdf`
